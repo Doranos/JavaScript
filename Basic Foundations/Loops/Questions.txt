@@ -1,0 +1,47 @@
+What is the last value alerted by this code? Why?
+
+let i = 3;
+
+while (i) {
+  alert( i-- );
+}
+
+Last Value is 1. Since the -- is written behind the Variable i it will first give out the current value of i, then reduce it by 1.
+So the output would be 3, 2, 1 and since the value becomes 0 the loop stops.
+
+
+
+For every loop iteration, write down which value it outputs and then compare it with the solution.
+
+Both loops alert the same values, or not?
+
+The prefix form ++i:
+
+let i = 0;
+while (++i < 5) alert( i );
+The postfix form i++
+
+let i = 0;
+while (i++ < 5) alert( i );
+
+++i: 1, 2, 3, 4 adds +1 to i and Checks if i is less than 5. 
+i++ 1, 2, 3, 4, 5 Ckecks if i is less than 5 and adds +1 to i.
+since the first loop adds +1 before the Check it skips the 0 leading to 1 less iteration.
+
+
+
+For each loop write down which values it is going to show. Then compare with the answer.
+
+Both loops alert same values or not?
+
+The postfix form:
+
+for (let i = 0; i < 5; i++) alert( i );
+The prefix form:
+
+for (let i = 0; i < 5; ++i) alert( i );
+
+both go from 0 to 4, because of the algorithim for works on: it declares the value, checks if the condition is true, excecutes the code block and then increments.
+
+
+
