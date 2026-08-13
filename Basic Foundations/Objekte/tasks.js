@@ -88,5 +88,56 @@ switch(auswahl){
         multiplyNumeric(menu)
         for( let key in menu){
             alert(key + ": " + menu[key])
-        }
+        } break;
+        // Here the function makeUser returns an object.
+        // What is the result of accessing its ref? Why?
+        // function makeUser() {
+        // return {
+        //     name: "John",
+        //     ref: this
+        // };
+        // }
+        // let user = makeUser();
+        // alert( user.ref.name ); // What's the result?
+        // Gives an error 
+        case 5:
+            // Create an object calculator with three methods:
+            // read() prompts for two values and saves them as object properties with names a and b respectively.
+            // sum() returns the sum of saved values.
+            // mul() multiplies saved values and returns the result.
+            // let calculator = {
+            // ... your code ...
+            // };
+            // calculator.read();
+            // alert( calculator.sum() );
+            // alert( calculator.mul() );
+
+            let calculator =  {
+                read() {
+                    this.a = +prompt("a?", '');
+                    this.b = +prompt("b", '');
+                },
+                sum() {
+                    return this.a + this.b
+                },
+                mul() {
+                    return this.a * this.b
+                }
+            };
+            calculator.read();
+            alert( calculator.sum() );
+            alert( calculator.mul() );
+            break;
+        case 6:
+            function Accumulator(startingValue){
+                this.value = startingValue;
+                this.read = function()  {
+                    this.value += +prompt("Value:", '');
+                }
+            }
+            let accumulator = new Accumulator(1);
+            accumulator.read();
+            accumulator.read();
+            alert(accumulator.value);
+            
 }
